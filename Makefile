@@ -1,5 +1,6 @@
-all: one
-one: one.f90
+all: one.out
+
+%.out: %.f90
 	gfortran $< -o $@
 clean:
-	rm -rf one
+	rm -rf *.out
